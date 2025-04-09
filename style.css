@@ -146,8 +146,17 @@ button {
     height: 100%;
 }
 
-.block4-title {
-    margin-bottom: 10px;
+.block4-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+
+.block4-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .block4-content {
@@ -215,5 +224,19 @@ button {
 
     .block3-list-item:nth-child(2) {
         grid-column: span 2;
+    }
+
+    .block4-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .block4-content {
+        align-items: center;
+    }
+
+    .block4-list-btn {
+        margin: 0;
     }
 }
