@@ -2,6 +2,7 @@
     padding: 0px;
 	margin: 0px;
 	border: none;
+    box-sizing: border-box;
 }
 
 body {
@@ -20,7 +21,7 @@ button {
 
 .container {
     margin: 0 auto;
-    max-width: 1470px;
+    max-width: 1510px;
     padding: 0 20px;
 }
 
@@ -118,7 +119,7 @@ button {
 }
 
 .block3-footer-item {
-    width: 86%;
+    width: 80%;
     min-height: 155px;
 }
 
@@ -128,12 +129,16 @@ button {
 }
 
 .section4 {
-    margin-bottom: 160px;
+    margin-bottom: 130px;
+}
+
+.section4-title {
+    margin-bottom: 35px;
 }
 
 .block4-list {
     background-color: gray;
-    padding: 25px 45px 10px 45px;
+    padding: 40px 45px;
     display: flex;
     align-items: center;
     gap: 50px;
@@ -292,6 +297,14 @@ button {
     .block3-footer-item {
         min-height: 200px;
         width: 100%;
+    }
+
+    .block4-list {
+        flex-direction: column;
+    }
+
+    .block4-container {
+        gap: 40px;
     }
 
     .block5-list {
