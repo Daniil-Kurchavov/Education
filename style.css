@@ -292,9 +292,14 @@ button {
 
     .block3-footer-item {
         min-height: 200px;
+        width: 100%;
     }
 
     .block5-list {
         flex-direction: column;
+    }
+
+    .block5-list-card-header {
+        max-height: none;
     }
 }
