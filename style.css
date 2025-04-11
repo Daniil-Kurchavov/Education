@@ -82,7 +82,7 @@ button {
 .block3-list {
     display: grid; 
     grid-template-columns: repeat(4, 1fr); 
-    grid-template-rows: repeat(3, 1fr); 
+    grid-template-rows: 1fr 1fr 1fr; 
     grid-template-areas: 
         "a a c c"
         "b b c c"
@@ -90,7 +90,7 @@ button {
     gap: 20px;
 }
 
-.heigth-item {
+.block3-item {
     min-height: 240px;
 }
 
