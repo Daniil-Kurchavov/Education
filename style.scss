@@ -1,0 +1,237 @@
+$mobile: 768px;
+$tablet: 991px;
+
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 100px 0;
+    font-family: 'Roboto';
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1510px;
+    padding: 0 20px;
+}
+
+.section {
+    margin-bottom: 100px;
+}
+
+.title {
+    margin-bottom: 40px;
+    font-size: 30px;
+
+    @media (max-width: $tablet) {
+        text-align: center;
+    }
+}
+
+.bg {
+    &-aqua {
+        background-color: aqua;
+    }
+    &-cadetblue {
+        background-color: cadetblue;
+    }
+}
+
+.btn {
+    background-color: purple;
+    padding: 20px 35px;
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.truncate {
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.block1 {
+    &-list {
+        display: flex;
+        gap: 45px;
+        flex-wrap: wrap;
+
+        @media (max-width: $mobile) {
+            flex-direction: column;
+        }
+    }
+    &-item {
+        min-height: 240px;
+        flex: 0 1 calc(100% / 3 - 30px);
+
+        @media (max-width: $tablet) {
+            flex: 0 1 calc(50% - 23px);
+        }
+
+        @media (max-width: $mobile) {
+            flex: none;
+        }
+    }
+}
+
+.block2 {
+    &-list {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        @media (max-width: $mobile) {
+            flex-direction: column;
+        }
+    }
+    &-item {
+        min-height: 240px;
+        flex: 0 1 calc(100% / 2 - 10px);
+
+        @media (max-width: $mobile) {
+            flex: none;
+        }
+    }
+}
+
+.block3 {
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "a a c c"
+            "b b c c"
+            "d d d e";
+        gap: 20px;
+
+        @media (max-width: $tablet) {
+            grid-template-areas:
+            "b b c c"
+            "a a a a"
+            "d d d e";
+        }
+
+        @media (max-width: $mobile) {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    &-item {
+        min-height: 240px;
+        &1 { grid-area: a; }
+        &2 { grid-area: b; }
+        &3 { grid-area: c; }
+        &4 { grid-area: d; }
+        &5 { grid-area: e; }
+    }
+}
+
+.block4 {
+    &-list {
+        background-color: gray;
+        padding: 40px 45px;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            align-items: normal;
+        }
+    }
+    &-img {
+        width: 160px;
+        height: 160px;
+        flex-shrink: 0;
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 10px;
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
+        @media (max-width: $mobile) {
+            gap: 40px;
+        }
+        
+    }
+    &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        word-break: break-all;
+    }
+    &-title {
+        font-size: 30px;
+    }
+    &-description {
+        font-size: 25px;
+    }
+    &__btn {
+        align-self: start;
+    }
+}
+
+.block5 {
+    &-list {
+        display: flex;
+        gap: 30px;
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
+    }
+    &__card {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        height: 100%;
+    }
+    &-card {
+        &-header {
+            max-height: 265px;
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &-main {
+            background-color: aliceblue;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            &-title {
+                font-size: 30px;
+            }
+        }
+    }
+    &-button {
+        margin-top: auto;
+    }
+}
