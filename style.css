@@ -206,7 +206,7 @@ button {
 }
 
 .block5-card-header {
-    height: 265px;
+    max-height: 265px;
 }
 
 .block5-card-main {
